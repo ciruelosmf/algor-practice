@@ -11,7 +11,14 @@ class Solution:
     for i in range(k):
       lst2.append(listt[lenlist-k+aux])
       aux = aux + 1
+    for i in range(lenlist-k):
+      lst2.append(listt[i])
+
     print(lst2)
 
 
+
+l = [1,2,3,4,5,6,7,5,6,7,2,3,45,44]
+a = Solution()
+a.rotate(l, 3)
 
