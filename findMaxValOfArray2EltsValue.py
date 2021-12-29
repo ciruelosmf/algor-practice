@@ -18,9 +18,9 @@ class Solution:
       for z in range(i, len(listt)):
         lst2.append(listt[z] * listt[i] )
     result = [i for i in lst2 if i in listt]
-
-    if len(listt) != 0:
-      print("este es")
+    print(lst2)
+    if len(result) != 0:
+      print("este es", max(result))
     else:
       print(" N/A")
 
@@ -48,6 +48,6 @@ class Solution:
 
 
 """
-array = [2,2,4,5,9]
+array = [2,2,6,5,9,18]
 a = Solution()
 a.findGreatestValue(array)
