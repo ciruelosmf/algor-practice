@@ -12,8 +12,21 @@ class Solution:
       noString = ""
       aux = []
       for i in s:
+        print(i,1)
+
+        #for k in range(len(aux)):
+          #if aux[k] == aux[k-1]:
+            #print(234, k)
+            #print(aux[k], "aux k")
+        
         aux.append(i)
-        print(i)
+        print(i,len(aux), "len")
+
+      print("")
+      print(aux)
+      for k in range(len(aux)-1):
+        if aux[k] == aux[k+1]:
+          aux[k] = aux[k-1]
       print(aux)
 
 a = Solution()
