@@ -31,14 +31,11 @@ class Solution2:
     
     d = {}
     res, maxCount = 0, 0
-    counterlist = []
    
-
     for i in nums:
-      if i in d:
-        d[i] = 1 + count.get(n,0)
-        res = i if count[n] > maxCount else res
-        maxCount = max(count[n], maxCount)
+      d[i] = 1 + d.get(i,0)
+      res = i if d[i] > maxCount else res
+      maxCount = max(d[i], maxCount)
     print(res)
 
 nums = [2,2,1,1,1,2,2]
