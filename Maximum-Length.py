@@ -9,13 +9,51 @@ A subsequence is an array that can be derived from another array by deleting som
 [ "cos", "meto", "log", "ia" ]
 
 cosia
-metoia -> s  maximum possible length
+metoia -> s -> maximum possible length
 logia
 
-len s = 6
+len(s) = 6
 
 """
 
 
 class Solution:
-    def maxLength(self, arr: List[str]) -> int:
+    def maxLength(self, arr):
+      d = {}
+      res, maxCount = 0, 0
+      aux_s = ""
+      counter = 1
+      for e in arr:
+        for c in e:
+          print(c)
+          if counter == len(arr):
+            counter = len(arr)-2
+            
+          if c in e[counter]:
+            aux_s += c 
+          else:
+            counter += 1
+      print(aux_s)
+
+            
+
+
+
+      for i in arr:
+        for c in i:
+          if c in d:
+            d[c] += 1
+            print(4)
+          else:
+            d[c] = 1
+            print(123123123123)
+
+      print(d)
+
+
+array = ["cos", "meto", "log", "ia"]
+
+aa = Solution()
+aa.maxLength(array)
+
+
