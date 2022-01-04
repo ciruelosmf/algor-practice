@@ -5,6 +5,22 @@ Note that you must do this in-place without making a copy of the array.
 **Output**:   nums   =   [1,3,12,0,0]
 """
 
+
+
+class Solution2:
+    def move_zeroes(self, array):
+        len_array = len(array)
+        l = 1
+
+        for r in range(len_array):
+          if array[r]:
+            array[l], array[r] =  array[r], array[l]
+
+
+        print(array, "array final")
+
+
+
 class Solution:
     def move_zeroes(self, array):
         len_array = len(array)
@@ -21,5 +37,11 @@ class Solution:
 
 nums = [0,1,0,3,12,0, 0,7,5,87,3,0,0, 3,12,0, 0,0,3,12,0, 0,7,5,87,3,0,0, 3,12,5,87,5,87,3,0,0,2,3]
 
+nums2 = [0,1,0,3,12,0, 0,7,5,87,3,0,0, 3,12,0, 0,0,3,12,0, 0,7,5,87,3,0,0, 3,12,5,87,5,87,3,0,0,2,3]
+
 aa = Solution()
 aa.move_zeroes(nums)
+
+print(nums)
+aaa = Solution2()
+aaa.move_zeroes(nums2)
