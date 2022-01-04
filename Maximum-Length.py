@@ -28,8 +28,9 @@ class Solution:
           print(c)
           if counter == len(arr):
             counter = len(arr)-2
-            
-          if c in e[counter]:
+          print(aux_s,"auxs")
+          print(counter, arr[counter], "    counter, arr[counter]")
+          if c in arr[counter]:
             aux_s += c 
           else:
             counter += 1
