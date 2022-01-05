@@ -28,13 +28,13 @@ class Solution:
         res = 0
         for num in nums:
             print("")
-            print(bin(res), "no xor")
+            print(bin(res), "no xor", num, "num")
             res = res ^ num
             print(bin(res))
         return res
 
-
-nums = [4,1,2,1,2]
+# 010 001(011) 100 (111) 001 (110) 010 (100)
+nums = [2,1,4,1,2]
 
 aa = Solution()
 aa.singleNumber(nums)
