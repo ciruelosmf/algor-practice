@@ -27,7 +27,10 @@ class Solution:
         # xor
         res = 0
         for num in nums:
-            res ^= num
+            print("")
+            print(bin(res), "no xor")
+            res = res ^ num
+            print(bin(res))
         return res
 
 
