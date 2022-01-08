@@ -20,6 +20,8 @@ The numbers in nums sorted in non-decreasing order are ["1","2","12","21"].
 The 3rd largest integer in nums is "2".
 """
 
+import heapq as heap
+
 class Solution:
     def kthLargestNumber(self, nums, k):
       maxHeap = [-int(n) for n in nums]
