@@ -6,17 +6,21 @@ string_to_check = "(*)*()"
 
 
 def valid_parenthesis_string(stringy):
-    minLeft = 0
-    maxLeft = 0
+    minLeft, maxLeft = 0, 0
+     
 
     for c in stringy:
-        if i + a[i] >= target:
-            print(i + a[i],"asd")
-            target = i
-        print(i,"i",target)
-        print(" ")
+        if c == "(":
+            minLeft, maxLeft = minLeft +1 , maxLeft + 1
+        elif c == ")":
+            minLeft, maxLeft = minLeft - 1 , maxLeft - 1
+        else:
+            minLeft, maxLeft = minLeft - 1 , maxLeft + 1
+
+    if minLeft == 0:
+        return True
 
 
-b = valid_parenthesis_string(stringy)
+b = valid_parenthesis_string(string_to_check)
 
 print(b, "valid_parenthesis_string")
